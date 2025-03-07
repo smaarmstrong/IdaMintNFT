@@ -14,7 +14,7 @@ In the case of Cardano this URL could be:
 </ol>
 
 
-## On the NFT Side of things...
+## On the NFT side of things...
 <ul>
 <li>An NFT Could be "pre-minted" or "staged"</li>
   <ul>
@@ -30,3 +30,6 @@ In the case of Cardano this URL could be:
     </ul>
   </ul>
 </ul>
+
+## This repo concerns the NFT side of things.
+For now, I am just going to write some basic Aiken for the minimum requirement of **one validator spending handler** and **one validator minting handler.**

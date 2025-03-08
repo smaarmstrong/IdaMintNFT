@@ -20,7 +20,7 @@ In the case of Cardano this URL could be:
   <ul>
     <li>then "activated" when via transaction (ie: claimed)</li>
   </ul>
-<li>Or if could be the whole process or minting</li>
+<li>Or if could be the whole process of minting</li>
   <ul>
 <li>I have a blank NFC, let's create a physical NFT Bookmark</li>
     <ul>

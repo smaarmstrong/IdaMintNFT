@@ -1,0 +1,133 @@
+{
+  "preamble": {
+    "title": "idano/idamint",
+    "description": "Aiken contracts for project 'idano/idamint'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.5+a7741ec"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "ida_mint.ida_mint_validator.mint",
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/ida_mint~1IdaMintRedeemer"
+        }
+      },
+      "compiledCode": "589b01010032323232323225333002323232323253330073370e900018041baa00113253330083370e900018049baa00313232323232323232533301330150021616375a602600260260046eb8c044004c044008dcc9bae300f001300f00237326eb8c034004c028dd50018b1bae300b300937540022c6014601600460120026012004600e00260086ea8004526136565734aae7555cf2ab9f5742ae89",
+      "hash": "1987fa749b7017d5cd4fc9d93d717b062c578939e9cf90276a7844b3"
+    },
+    {
+      "title": "ida_mint.ida_mint_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "589b01010032323232323225333002323232323253330073370e900018041baa00113253330083370e900018049baa00313232323232323232533301330150021616375a602600260260046eb8c044004c044008dcc9bae300f001300f00237326eb8c034004c028dd50018b1bae300b300937540022c6014601600460120026012004600e00260086ea8004526136565734aae7555cf2ab9f5742ae89",
+      "hash": "1987fa749b7017d5cd4fc9d93d717b062c578939e9cf90276a7844b3"
+    },
+    {
+      "title": "ida_spend.ida_spend_validator.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/ida_spend~1IdaDatum"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/ida_spend~1IdaSpendRedeemer"
+        }
+      },
+      "compiledCode": "587301010032323232323225333002323232323253330073370e900118041baa0011323232533300a3370e900018059baa0051533300d300c375400a2c2c2c601a601c004601800260126ea800458c028c02c008c024004c024008c01c004c010dd50008a4c26cacae6955ceaab9e5573eae855d11",
+      "hash": "eb6b64eac423fdf161a2e12dd06c3f9faa11378165bf10b1de0e3bf6"
+    },
+    {
+      "title": "ida_spend.ida_spend_validator.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "587301010032323232323225333002323232323253330073370e900118041baa0011323232533300a3370e900018059baa0051533300d300c375400a2c2c2c601a601c004601800260126ea800458c028c02c008c024004c024008c01c004c010dd50008a4c26cacae6955ceaab9e5573eae855d11",
+      "hash": "eb6b64eac423fdf161a2e12dd06c3f9faa11378165bf10b1de0e3bf6"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "String": {
+      "dataType": "#string"
+    },
+    "ida_mint/IdaMintRedeemer": {
+      "title": "IdaMintRedeemer",
+      "anyOf": [
+        {
+          "title": "IdaMintRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "nft_name",
+              "$ref": "#/definitions/String"
+            },
+            {
+              "title": "nft_loc",
+              "$ref": "#/definitions/String"
+            },
+            {
+              "title": "nfc_id",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "timestamp",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    },
+    "ida_spend/IdaDatum": {
+      "title": "IdaDatum",
+      "anyOf": [
+        {
+          "title": "IdaDatum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "nfc_id",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "nft_name",
+              "$ref": "#/definitions/String"
+            },
+            {
+              "title": "nft_loc",
+              "$ref": "#/definitions/String"
+            }
+          ]
+        }
+      ]
+    },
+    "ida_spend/IdaSpendRedeemer": {
+      "title": "IdaSpendRedeemer",
+      "anyOf": [
+        {
+          "title": "IdaSpendRedeemer",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    }
+  }
+}

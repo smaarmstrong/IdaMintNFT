@@ -1,5 +1,5 @@
 # IdaMintNFT
-Mint NFTs for NFCs. Backend.
+Mint NFTs for NFCs. Backend. See <a href="https://github.com/smaarmstrong/IdaMintNFC">mobile NFC app frontend</a>.
 
 ## NFC Starts Blank. Ends up w/ a URL.
 In the case of Cardano this URL could be:
@@ -19,6 +19,10 @@ In the case of Cardano this URL could be:
 <li>An NFT Could be "pre-minted" or "staged"</li>
   <ul>
     <li>then "activated" when via transaction (ie: claimed)</li>
+    <li>"pre-minted" could even include NFTs minted outside of our policity</li>
+    <ul>
+      <li>**N.B.** this means we cannot use their policy -- just our in-house policy.</li>
+    </ul>
   </ul>
 <li>Or if could be the whole process of minting</li>
   <ul>

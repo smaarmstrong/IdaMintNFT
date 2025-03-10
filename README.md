@@ -37,3 +37,17 @@ In the case of Cardano this URL could be:
 
 ## This repo concerns the NFT side of things.
 For now, I am just going to write some basic Aiken for the minimum requirement of **one validator spending handler** and **one validator minting handler.**
+
+### Minting
+<ul>
+  <li>Ensure the NFT has valid metadata (name, url, nfc_id).</li>
+  <li>Restrict minting to the authorized minter.</li>
+  <li>Guarantee that only one NFT is created per NFC.</li>
+</ul>
+
+### Spending
+<ul>
+  <li>Ensure the first person to scan the NFC can claim the NFT.</li>
+  <li>After being claimed, the NFT should no longer be locked by the script.</li>
+  <li>Prevent the same NFC from being linked to another NFT.</li>
+</ul>
